@@ -13,7 +13,7 @@
 	integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Scripts -->
-</head>
+</head> 
 <body>
 	<div class="banner-wrap p-3">
 		<x-carearea.header />
