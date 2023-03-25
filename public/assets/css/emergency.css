@@ -1,0 +1,12 @@
+
+.rounded{
+    border-radius: 30px !important;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+.text-box{
+    z-index: 99;
+    padding-top: 20px;
+    color: #fff;
+}
