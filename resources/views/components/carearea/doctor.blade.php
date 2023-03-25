@@ -17,4 +17,4 @@
         </div>
         <a href="{{ route('appoinments.new',$doctor->id) }}" class="btn appo-btn shadow-sm">Appoinment</a>
     </div>
-</div>
+</div> 
