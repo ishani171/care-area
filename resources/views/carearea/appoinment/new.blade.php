@@ -6,10 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-8">
             <div class="p-3 bg-white  border rounded-2">
-                <div>
-                    <h4>Make Appoinment</h4>
-                </div>
-                <div class="mt-4 d-flex">
+                <div class="d-flex">
                     <div class="col-xl-4 col-lg-4">
                         @if($doctor->image != null)
                             <img class="w-100 shadow-sm" src="{{ asset('doctors/'.$doctor->image.'') }}" alt="Doctor">
@@ -23,7 +20,10 @@
                     </div>
                     <div class="px-4 d-flex flex-column align-items-space-between h-100">
                         <div>
-                            <h6 class="text-lg mb-0 fs-4">Dr. {{ ucfirst($doctor->first_name) }} {{ ucfirst($doctor->last_name) }}</h6>
+                            <h4>Make Appoinment</h4>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="text-lg mb-0 fw-bold">Dr. {{ ucfirst($doctor->first_name) }} {{ ucfirst($doctor->last_name) }}</h5>
                             <p>{{ $doctor->speciality_name }}</p>
                         </div>
                         <div>
@@ -55,12 +55,14 @@
                             <p>Doctor Charge <span class="fs-5 text-danger">Rs.{{ $doctor->doctor_charge }}.00</span></p>    
                         </div>
                         <div>
-                            <form action="{{ route('appoinments.store') }}" method="POST">
+                            <form action="{{ route('appoinments.store') }}" method="POST" id="appoinmentForm">
                                 <div class="form-group">
-                                    <input type="date" class="form-control" name="date">
+                                    <input type="hidden" value="{{ $doctor->id }}" name="doctor_id">
+                                    <input type="date" class="form-control" name="date" id="date" required>
+                                    <span id="error" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit">Create</button>
+                                <div class="form-group mt-3">
+                                    <button type="submit" class="btn btn-sm btn-dark">Create</button>
                                 </div>
                             </form>
                         </div>
@@ -69,6 +71,7 @@
             </div>
         </div>
     </div>
+    <input type="hidden" value="{{ $doctor->available_days }}" id="available_days">
 </div>
     
 @endsection
@@ -77,4 +80,28 @@
 <style>
 
 </style>
+@endsection
+
+@section('script')
+<script>
+    function error_msg(err){
+        $("#error").empty()
+        $("#error").text(err)
+    }
+    $("#appoinmentForm").submit(function(e){
+        var available_days = JSON.parse($("#available_days").val())
+        var selected = $("#date").val()
+        var dayOfWeek = new Date(selected).toLocaleDateString('en-US', { weekday: 'long' });
+        var err = $("#error")
+
+        if(!available_days.includes(dayOfWeek.toLowerCase())){
+            e.preventDefault();
+            error_msg(`Not available on ${dayOfWeek}`)
+        }else if(new Date(selected) < new Date()){
+            e.preventDefault();
+
+            error_msg('Selected day has passed')
+        }
+    })
+</script>
 @endsection

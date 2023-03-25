@@ -21,6 +21,10 @@ class AppoinmentController extends Controller
         return view('carearea.appoinment.new',["doctor" => Doctor::find($doctor_id)]);
     }
 
+    public function check(Request $request){
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *

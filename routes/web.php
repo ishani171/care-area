@@ -51,6 +51,7 @@ Route::prefix('admin/patients')->group(function () {
 
 Route::prefix('appoinments')->group(function () {
 	Route::get('/new/{doctor_id}', [AppoinmentController::class, 'new'])->name('appoinments.new')->middleware('auth');
+	Route::post('/check',[AppoinmentController::class, 'check'])->middleware('auth');
 });
 
 Route::prefix('receptions')->group(function () {
