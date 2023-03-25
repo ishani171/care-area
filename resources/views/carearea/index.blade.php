@@ -24,7 +24,7 @@
 						<div class="h-100 w-100">
 							<div class="content-wrap mt-4 shadow-sm rounded">
 								<div class="p-3">
-									<h2 class="f-title title">Welcome to<br> <span class="cr">Care Area </span>,</h2>
+									<h2 class="f-title title">Welcome to<br> <span class="cr">Care pukki </span>,</h2>
 									<h3 class="lh-base f-h fs-3 text-wrap">
 										 where world-class healthcare and passion for prevention
 										 meet in a magnificent atmosphere with truly outstanding service.
