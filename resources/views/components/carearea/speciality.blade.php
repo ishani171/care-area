@@ -9,5 +9,5 @@
                 <button class="border-0 w-100 rounded-2 view-btn px-3 py-2 text-white">View</button>
             </div>
         </div>
-    </div>
+    </div> 
 </a>
