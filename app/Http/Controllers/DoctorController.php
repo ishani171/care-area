@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class DoctorController extends Controller
 {
+    public $doctor;
+
+    public function __construct(){
+        $this->doctor = new Doctor();
+    }
 
 	public function admin_doctors(){
 		return view('carearea.admin.doctors.index',["doctors" => Doctor::all()]);
@@ -21,6 +26,18 @@ class DoctorController extends Controller
 	public function add_new_doctor_view(){
 		return view('carearea.admin.doctors.new',["specialities" => Speciality::all()]);
 	}
+
+    public function search(Request $request){
+        $result = $this->doctor->search($request->all()); 
+
+        $speciality = null;
+
+        if($request->speciality != ""){
+            $speciality = Speciality::find($request->speciality)->name;
+        }
+
+        return view('carearea.doctors.search',["query" => $request->squery, "doctors" => $result, "speciality" => $speciality]);
+    } 
 
     /**
      * Display a listing of the resource.

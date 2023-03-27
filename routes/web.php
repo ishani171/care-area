@@ -8,7 +8,7 @@ use App\Http\Controllers\SpecialityController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\Auth\RegisteredUserController;
-
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('carearea.index');
 });
+
+Route::get('/home',[HomeController::class, 'index'])->name('home');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.view');
 
@@ -57,7 +59,10 @@ Route::prefix('receptions')->group(function () {
 	Route::get('/dashboard', [ReceptionController::class, 'dashboard'])->name('receptions.dashboard')->middleware('auth');
 });
 
-Route::get('doctors/{speciality_id}', [DoctorController::class, 'doctors'])->name('doctors.view')->middleware('auth');
+Route::prefix('doctors')->group(function () {
+	Route::get('/{speciality_id}', [DoctorController::class, 'doctors'])->name('doctors.view')->middleware('auth');
+	Route::post('/search',[DoctorController::class, 'search'])->name('doctors.search');
+});
 
 
 //* ************************************************************************************************* *//

@@ -17,11 +17,11 @@
 									<a class="dropdown-toggle nav-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 										<i class="fa-solid fa-user-doctor fs-4"></i>
 									</a>
-									<ul class="dropdown-menu px-3" aria-labelledby="dropdownMenuButton1">
-										<h6 class="text-center f-h border-bottom pb-2">Popular Services</h6>
-										<li><a class="dropdown-item" href="/doctors/18">General Medicine</a></li>
-										<li><a class="dropdown-item" href="/doctors/19">General surgery</a></li>
-										<li><a class="dropdown-item" href="/doctors/6">Child psychiatry</a></li>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<h6 class="text-center f-h fw-1 border-bottom pb-2">Popular Services</h6>
+										<li><a class="dropdown-item f-h" href="/doctors/18">General Medicine</a></li>
+										<li><a class="dropdown-item f-h" href="/doctors/19">General surgery</a></li>
+										<li><a class="dropdown-item f-h" href="/doctors/6">Child psychiatry</a></li>
 									</ul>
 								</div>
 						</li>

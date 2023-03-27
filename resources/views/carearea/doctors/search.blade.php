@@ -1,11 +1,18 @@
 @extends('layouts.doctors')
 
 @section('content')
-
+@php 
+///var_dump($query);die();
+@endphp
 <div class="container mt-4">
     <div class="row">
         <div class="col-12">
-            <x-carearea.basic.title :title="'Doctors For '.$speciality.''" />
+            @if($query != null)
+                <x-carearea.basic.title :title="'Search Results For: '.$query.''" />
+            @endif
+            @if($speciality != null)
+                <x-carearea.basic.title :title="'Search Results For Speciality: '.$speciality.''" />
+            @endif
         </div>
     </div>
 </div>
@@ -13,7 +20,7 @@
     <div class="row">
         @if(count($doctors) == 0)
             <div class="col-12">
-                <x-alert.danger msg="No doctors are found in this speciality!" />
+                <x-alert.danger msg="No doctors are found!" />
             </div>
         @endif
         
@@ -40,9 +47,6 @@
     width: 4px;
     background: #222;
     border-radius: 999px;
-}
-.header-section{
-    background: #1e88e5;
 }
 </style>
 @endsection
