@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.doctors')
 
 @section('content')
 
@@ -55,12 +55,14 @@
                             <p>Doctor Charge <span class="fs-5 text-danger">Rs.{{ $doctor->doctor_charge }}.00</span></p>    
                         </div>
                         <div>
-                            <form action="{{ route('appoinments.store') }}" method="POST">
+                            <form action="{{ route('appoinment.payment') }}" method="POST">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="date" class="form-control" name="date">
+                                    <input type="hidden" value="{{ $doctor->id }}" name="doctor_id">
+                                    <input type="date" class="form-control" name="date" onchange="checkAvailableTimes()">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit">Create</button>
+                                    <button type="submit" class="btn btn-sm btn-info mt-3">Create</button>
                                 </div>
                             </form>
                         </div>

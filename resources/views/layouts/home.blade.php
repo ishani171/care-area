@@ -34,7 +34,7 @@
 			font-family: Quicksand;
 		}
 		.swiper{
-			height: 520px;
+			height: 420px;
 			width: 100%;
 		}
 		.sw{
@@ -84,29 +84,29 @@
 		<div class="swiper-pagination"></div>
 		</div>
 	</section>
+
     @yield('content')
+
 	<section class="mt-5">
 		<x-carearea.footer />
 	</section>
 </body>
 <script>
 	const swiper = new Swiper('.swiper', {
-	// Optional parameters
-	direction: 'horizontal',
-	loop: true,
-	autoplay: {
-		delay: 3000,
-	},
-	scrollbar:false,
-	// Navigation arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	pagination: {
-    	el: '.swiper-pagination',
-    	type: 'bullets',
-  	},
+		direction: 'horizontal',
+		loop: true,
+		autoplay: {
+			delay: 3000,
+		},
+		scrollbar:false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		},
 	});
 </script>
 </html>

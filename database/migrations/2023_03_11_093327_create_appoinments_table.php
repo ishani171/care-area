@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('doctor_id');
-            $table->text('date_time')->default(null)->nullable();
+            $table->string('date')->default(null)->nullable();
+            $table->string('time')->default(null)->nullable();
             $table->text('note')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();

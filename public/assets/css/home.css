@@ -22,20 +22,21 @@
 }
 .content-banner-1{
 	background-color: rgb(253, 166, 234);
-	height: 600px;
+	height: 100px;
 }
 .content-banner-2{
 	background-color: rgb(35, 163, 243);
-	height: 600px;
+	height: 100px;
 }
 .content-banner-3{
 	background-color: rgb(13, 227, 216);
-	height: 600px;
+	height: 100px;
 }
 .content-banner-4{
 	background-color: rgb(246, 254, 226);
-	height: 600px;
+	height: 100px;
 }
-.cr{
-	
+.dropdown-menu{
+	min-width: 220px;
+	border-radius: 9px;
 }

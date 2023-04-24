@@ -12,7 +12,9 @@ class Appoinment extends Model
     protected $fillable = [
         'user_id',
         'doctor_id',
-        'date_time',
+        'date',
+        'time',
         'note',
+        'status',
     ];
 }

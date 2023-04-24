@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -53,6 +54,7 @@ Route::prefix('admin/patients')->group(function () {
 
 Route::prefix('appoinments')->group(function () {
 	Route::get('/new/{doctor_id}', [AppoinmentController::class, 'new'])->name('appoinments.new')->middleware('auth');
+	Route::post('/payment',[PaymentController::class, 'create'])->middleware('auth')->name('appoinment.payment');
 });
 
 Route::prefix('receptions')->group(function () {

@@ -27,7 +27,7 @@
                                 <input type="text" placeholder="Leave a blank if not sure!" name="squery" class="form-control mt-2 f-p">
                             </div>
                             <div class="col-xl-2 col-lg-2 d-flex align-items-end justify-contnet-center">
-                                <button class="btn shadow-sm border btn-light" type="submit">Search</button>
+                                <button class="btn shadow-sm border btn-light f-p" type="submit">Search</button>
                             </div>
                         </div>
                     </section>
@@ -42,16 +42,20 @@
             <x-carearea.basic.title title="Popular Specialities" />
         </div>
         <div class="col-xl-3 col-lg-3 mt-4">
-            <x-carearea.speciality name="Cardiology" id="2" description="sadas sadasdas asdasd sadsad asdas asdas asddsdas asdtest tes tes dsfldsan fdn dflj  kdasdnadn asndlkasdn" />
+            <x-carearea.speciality name="General Medicine" id="2" 
+            description="General Medicine, also known as Internal Medicine, is a medical specialty that focuses on the prevention, diagnosis, and treatment of a wide range of adult diseases and conditions." />
         </div>
         <div class="col-xl-3 col-lg-3 mt-4">
-            <x-carearea.speciality name="Cardiology" id="2" description="sadas sadasdas asdasd sadsad asdas asdas asddsdas asdtest tes tes dsfldsan fdn dflj  kdasdnadn asndlkasdn" />
+            <x-carearea.speciality name="General Surgery" id="15" 
+            description="General Surgery is a medical specialty that focuses on the surgical treatment of a wide range of conditions and diseases." />
         </div>
         <div class="col-xl-3 col-lg-3 mt-4">
-            <x-carearea.speciality name="Cardiology" id="2" description="sadas sadasdas asdasd sadsad asdas asdas asddsdas asdtest tes tes dsfldsan fdn dflj  kdasdnadn asndlkasdn" />
+            <x-carearea.speciality name="Child Psychiatry" id="16" 
+            description="Child Psychiatry, also known as Pediatric Psychiatry, is a medical specialty that focuses on the diagnosis, treatment, and management of mental health conditions in children and adolescents." />
         </div>
         <div class="col-xl-3 col-lg-3 mt-4">
-            <x-carearea.speciality name="Cardiology" id="2" description="sadas sadasdas asdasd sadsad asdas asdas asddsdas asdtest tes tes dsfldsan fdn dflj  kdasdnadn asndlkasdn" />
+            <x-carearea.speciality name="Cardiology" id="4" 
+            description="Cardiology is a medical specialty that focuses on the diagnosis, treatment, and management of diseases and conditions related to the cardiovascular system, which includes the heart and blood vessels." />
         </div>
     </div>
 </div>

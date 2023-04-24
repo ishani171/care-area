@@ -10,7 +10,7 @@
 					<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 						<ul class="navbar-nav">
 						<li class="nav-item ms-2">
-							<a class="nav-link active" aria-current="page" href="#" title="Home"><i class="fa-solid fa-house fs-4"></i></a>
+							<a class="nav-link active" aria-current="page" href="/home" title="Home"><i class="fa-solid fa-house fs-4"></i></a>
 						</li>
 						<li class="nav-item ms-2">
 								<div class="dropdown">
@@ -19,9 +19,9 @@
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 										<h6 class="text-center f-h fw-1 border-bottom pb-2">Popular Services</h6>
-										<li><a class="dropdown-item f-h" href="/doctors/18">General Medicine</a></li>
-										<li><a class="dropdown-item f-h" href="/doctors/19">General surgery</a></li>
-										<li><a class="dropdown-item f-h" href="/doctors/6">Child psychiatry</a></li>
+										<li><a class="dropdown-item f-h" href="/doctors/2">General Medicine</a></li>
+										<li><a class="dropdown-item f-h" href="/doctors/15">General surgery</a></li>
+										<li><a class="dropdown-item f-h" href="/doctors/16">Child psychiatry</a></li>
 									</ul>
 								</div>
 						</li>

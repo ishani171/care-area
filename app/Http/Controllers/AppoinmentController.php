@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appoinment;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AppoinmentController extends Controller
 {
@@ -39,7 +41,10 @@ class AppoinmentController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $data = $request->all();
+        $data["user_id"] = Auth::id();
+
+        Appoinment::create($data);
     }
 
     /**

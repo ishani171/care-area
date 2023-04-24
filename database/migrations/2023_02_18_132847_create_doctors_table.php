@@ -27,7 +27,6 @@ return new class extends Migration
 			$table->integer('doctor_charge');
             $table->text('available_days');
             $table->text('time_from');
-            $table->time('time_from');
             $table->time('time_to');
 			$table->string('password');
             $table->timestamps();
