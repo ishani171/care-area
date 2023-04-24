@@ -14,7 +14,7 @@ class Appoinment extends Model
         'doctor_id',
         'date',
         'time',
-        'note',
+        'note', 
         'status',
     ];
 }
