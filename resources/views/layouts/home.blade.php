@@ -18,6 +18,7 @@
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
 	integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -27,6 +28,14 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
 
+=======
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+	integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+	crossorigin="anonymous"></script>
+	@yield('styles')
+
+	<style>
+>>>>>>> 1c7f7685547b1e8a4d5d7f571f71d2041e854b06
 		h1,h2,h3,h4,h5,h6{
 			font-family: Nunito;
 		}
