@@ -10,11 +10,7 @@
 					<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 						<ul class="navbar-nav">
 						<li class="nav-item ms-2">
-<<<<<<< HEAD
 							<a class="nav-link active" aria-current="page" href="/home" title="Home"><i class="fa-solid fa-house fs-4"></i></a>
-=======
-							<a class="nav-link active" aria-current="page" href="#" title="Home"><i class="fa-solid fa-house fs-4"></i></a>
->>>>>>> 1c7f7685547b1e8a4d5d7f571f71d2041e854b06
 						</li>
 						<li class="nav-item ms-2">
 								<div class="dropdown">

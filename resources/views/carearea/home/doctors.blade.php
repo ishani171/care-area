@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @extends('layouts.doctors')
-=======
-@extends('layouts.home')
->>>>>>> 1c7f7685547b1e8a4d5d7f571f71d2041e854b06
 
 @section('content')
 
