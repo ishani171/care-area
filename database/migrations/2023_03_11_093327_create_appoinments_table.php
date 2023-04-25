@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('doctor_id');
             $table->string('date')->default(null)->nullable();
             $table->string('time')->default(null)->nullable();
+            $table->bigInteger('price');
             $table->text('note')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();

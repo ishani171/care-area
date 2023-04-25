@@ -44,7 +44,9 @@ class AppoinmentController extends Controller
         $data = $request->all();
         $data["user_id"] = Auth::id();
 
-        Appoinment::create($data);
+        $appoinment = Appoinment::create($data);
+
+        return redirect()->route('appoinment.payment',$appoinment->id);
     }
 
     /**

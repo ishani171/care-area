@@ -26,6 +26,9 @@
 								</div>
 						</li>
 						<li class="nav-item ms-2">
+							<a class="nav-link" href="{{ route('dashboard') }}" title="Dashboard"><i class="fa-solid fa-table-columns fs-4"></i></a>
+						  </li>
+						<li class="nav-item ms-2">
 							<a class="nav-link" href="#" title="Jobs"><i class="fa-solid fa-briefcase fs-4"></i></a>
 						</li>
 						<li class="nav-item ms-2">

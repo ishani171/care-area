@@ -8,6 +8,7 @@ use App\Http\Controllers\SpecialityController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
@@ -54,7 +55,7 @@ Route::prefix('admin/patients')->group(function () {
 
 Route::prefix('appoinments')->group(function () {
 	Route::get('/new/{doctor_id}', [AppoinmentController::class, 'new'])->name('appoinments.new')->middleware('auth');
-	Route::post('/payment',[PaymentController::class, 'create'])->middleware('auth')->name('appoinment.payment');
+	Route::get('/payment/{appoinment}',[PaymentController::class, 'create'])->middleware('auth')->name('appoinment.payment');
 });
 
 Route::prefix('receptions')->group(function () {
@@ -66,7 +67,8 @@ Route::prefix('doctors')->group(function () {
 	Route::post('/search',[DoctorController::class, 'search'])->name('doctors.search');
 });
 
-
+Route::post('/paypal-payment-completed',[PaymentController::class, 'payment_complete']);
+Route::post('/orders',[PaymentController::class, 'orders']);
 //* ************************************************************************************************* *//
 
 //RESOURCES
@@ -77,9 +79,7 @@ Route::resource('receptions',ReceptionController::class);
 Route::resource('appoinments',AppoinmentController::class);
 
 //DEFAULT ROUTES
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashBoardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

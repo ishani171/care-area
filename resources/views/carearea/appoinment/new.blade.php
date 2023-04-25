@@ -55,11 +55,12 @@
                             <p>Doctor Charge <span class="fs-5 text-danger">Rs.{{ $doctor->doctor_charge }}.00</span></p>    
                         </div>
                         <div>
-                            <form action="{{ route('appoinment.payment') }}" method="POST">
+                            <form action="{{ route('appoinments.store') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <input type="hidden" value="{{ $doctor->id }}" name="doctor_id">
-                                    <input type="date" class="form-control" name="date" onchange="checkAvailableTimes()">
+                                    <input type="hidden" value="{{ $doctor->doctor_charge }}" name="price">
+                                    <input type="date" class="form-control" name="date" onchange="checkAvailableTimes()" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-sm btn-info mt-3">Create</button>
