@@ -34,27 +34,34 @@ Route::get('/', function () {
 
 Route::get('/home',[HomeController::class, 'index'])->name('home');
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.view');
+Route::prefix('/admin')->middleware(['auth','admin'])->group(function(){
+	
+	Route::get('/', [AdminController::class, 'index'])->name('admin.view');
 
-Route::prefix('admin/doctors')->group(function () {
-	Route::get('/', [DoctorController::class, 'admin_doctors'])->name('admin.doctors')->middleware('auth');
-	Route::get('/new', [DoctorController::class, 'add_new_doctor_view'])->name('admin.doctors.new')->middleware('auth');
+	Route::prefix('/doctors')->group(function () {
+		Route::get('/', [DoctorController::class, 'admin_doctors'])->name('admin.doctors');
+		Route::get('/new', [DoctorController::class, 'add_new_doctor_view'])->name('admin.doctors.new');
+	});
+	
+	Route::prefix('/receptions')->group(function () {
+		Route::get('/', [ReceptionController::class, 'receptions'])->name('admin.receptions');
+		Route::get('/new', [ReceptionController::class, 'add_new_reception_view'])->name('admin.receptions.new');
+	});
+	
+	Route::prefix('/specialities')->group(function () {
+		Route::get('/', [SpecialityController::class, 'all'])->name('admin.specialities');
+		Route::get('/new', [SpecialityController::class, 'add_new_speciality_view'])->name('admin.specialities.new');
+	});
+	
+	Route::prefix('/patients')->group(function () {
+		Route::get('/', [PatientController::class, 'patients'])->name('admin.patients');
+	});
+
+	Route::get('/jobs', [JobsController::class, 'admin_jobs'])->name('admin.jobs');
+
 });
 
-Route::prefix('admin/receptions')->group(function () {
-	Route::get('/', [ReceptionController::class, 'receptions'])->name('admin.receptions')->middleware('auth');
-	Route::get('/new', [ReceptionController::class, 'add_new_reception_view'])->name('admin.receptions.new')->middleware('auth');
-});
 
-Route::prefix('admin/specialities')->group(function () {
-	Route::get('/', [SpecialityController::class, 'all'])->name('admin.specialities')->middleware('auth');
-	Route::get('/new', [SpecialityController::class, 'add_new_speciality_view'])->name('admin.specialities.new')->middleware('auth');
-});
-
-
-Route::prefix('admin/patients')->group(function () {
-	Route::get('/', [PatientController::class, 'patients'])->name('admin.patients')->middleware('auth');
-});
 
 Route::prefix('appoinments')->group(function () {
 	Route::get('/new/{doctor_id}', [AppoinmentController::class, 'new'])->name('appoinments.new')->middleware('auth');
@@ -75,7 +82,6 @@ Route::get('/doctor/profile',[DoctorController::class, 'profile'])->name('doctor
 Route::post('/paypal-payment-completed',[PaymentController::class, 'payment_complete']);
 Route::post('/orders',[PaymentController::class, 'orders']);
 
-Route::get('/admin/jobs', [JobsController::class, 'admin_jobs'])->middleware('admin')->name('admin.jobs');
 
 //* ************************************************************************************************* *//
 

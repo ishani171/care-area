@@ -21,6 +21,9 @@ class User extends Authenticatable
 		'telephone',
 		'dob',
 		'province',
+        'admin',
+        'doctor',
+        'reception',
         'email',
         'password',
     ];

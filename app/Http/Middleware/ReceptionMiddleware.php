@@ -19,6 +19,9 @@ class ReceptionMiddleware
     {
         if(Auth::user()->reception){
             return $next($request);
+        }else{
+            return redirect()->route('home');
+            
         }
     }
 }

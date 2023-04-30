@@ -7,11 +7,15 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @if(!auth()->user()->doctor)
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div>
                         <h5 class="text-2xl">Your Appoinments</h5>
                     </div>
+                    @if(count($appoinments) == 0)
+                        <p>No Appoinments yet</p>
+                    @endif
                     @foreach ($appoinments as $item)
                         <div class="p-3 shadow mb-4 border-[1px] border-slate-100 mt-4">
                             <div class="flex justify-between">
@@ -74,6 +78,35 @@
                     </div>
                 </div>
             </div>
+            @endif
+            @if (auth()->user()->doctor)
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-3">
+                        @foreach ($appoinments as $item)
+                        @if($item->paid)
+                        <div class="p-3 shadow mb-4 border-[1px] border-slate-100 mt-4">
+                            <div class="flex justify-between">
+                                <span>Appoinment Id - {{ hash('md5',$item->id) }}</span>
+                                @if (!$item->paid)
+                                    <span class="px-2 rounded-full bg-amber-300 text-sm h-fit">Pending</span> 
+                                @endif
+                            </div>
+                            <div class="mt-2">
+                                <h6 class="font-bold">Patient Details</h6>
+                                <div>
+                                    <h5>Name: {{ $item->patient->name }}</h5>
+                                    <p>Tel: {{ $item->patient->telephone }}</p>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="font-bold">Date - {{ $item->date }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                    @endforeach
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 </x-app-layout>

@@ -27,7 +27,7 @@ class CreateDoctor extends FormRequest
             'first_name' => 'required',
 			'last_name' => 'required',
 			'email' => 'required',
-			'telephone' => 'required|min:10',
+			'telephone' => 'required',
 			'speciality' => 'required',
 			'docterate' => 'required',
 			'doctor_charge' => 'required',

@@ -6,14 +6,14 @@ use App\Models\Appoinment;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Srmklive\PayPal\Services\PayPal as PayPalClient;
+//use Srmklive\PayPal\Services\PayPal as PayPalClient;
 
 class PaymentController extends Controller
 {
     public $provider;
 
     public function __construct(){
-        $this->provider = new PayPalClient;
+       // $this->provider = new PayPalClient;
     }
 
     public function create(Request $request,$appoinment){

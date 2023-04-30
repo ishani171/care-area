@@ -35,15 +35,9 @@
 						<a class="nav-link" href="/about" title="About"><i class="fa-solid fa-circle-question fs-4"></i></a>
 					  </li>
 					  @auth
-						@if (auth()->user()->doctor)
-							<li class="nav-item ms-2">
-								<a class="nav-link" href="{{ route('doctor.profile') }}" title="Profile"><i class="fa-solid fa-user fs-4"></i></a>
-							</li>
-						@else
-							<li class="nav-item ms-2">
-								<a class="nav-link" href="/profile" title="Profile"><i class="fa-solid fa-user fs-4"></i></a>
-							</li>
-						@endif
+					  <li class="nav-item ms-2">
+						<a class="nav-link" href="/profile" title="Profile"><i class="fa-solid fa-user fs-4"></i></a>
+					</li>
 					  @endauth
 					  @guest
 					  <li class="nav-item ms-2">

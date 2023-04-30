@@ -19,6 +19,8 @@ class AdminMiddleware
     {
         if(Auth::user()->admin){
             return $next($request);
+        }else{
+            return redirect()->route('home');
         }
     }
 }
