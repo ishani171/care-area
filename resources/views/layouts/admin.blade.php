@@ -45,6 +45,9 @@
 						<div class="d-flex justify-center align-middle p-3 shadow-sm bg-blue-200 mb-3 text-black">
 							<a href="/admin/specialities"><h5 class=" text-xl">Specialities</h5></a>
 						</div>
+						<div class="d-flex justify-center align-middle p-3 shadow-sm bg-blue-200 mb-3 text-black">
+							<a href="{{ route('admin.jobs') }}"><h5 class=" text-xl">Jobs</h5></a>
+						</div>
 					</div>
 				</div>
 			</div>

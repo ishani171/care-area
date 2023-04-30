@@ -5,7 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Admin\CreateDoctor;
 use App\Models\Doctor;
 use App\Models\Speciality;
+use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\View\View;
 
 class DoctorController extends Controller
 {
@@ -39,6 +44,11 @@ class DoctorController extends Controller
         return view('carearea.doctors.search',["query" => $request->squery, "doctors" => $result, "speciality" => $speciality]);
     } 
 
+    public function profile(Request $request): View
+    {
+        return view('carearea.doctors.profile', ["doctor" => Doctor::where('user_id', Auth::id())->get()]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -66,16 +76,27 @@ class DoctorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateDoctor $request)
+    public function store(CreateDoctor $request): RedirectResponse
     {
         $data = $request->all();
-        //var_dump(gmdate($data["time_from"]));die();
+        $user = [];
+
+        $user["name"] = $data["first_name"].' '.$data["last_name"];
+        $user["telephone"] = $data["telephone"];
+        $user["email"] = $data["email"];
+        $user["password"] = Hash::make($data["password"]);
+        $user["doctor"] = true;
 
         $data["time_from"] = gmdate($data["time_from"]);
         $data["time_to"] = gmdate($data["time_to"]);
 
         $specname = Speciality::find($request->speciality);
         $data["speciality_name"] = $specname->name;
+        
+        $new_user = User::create($user);
+
+        $data["user_id"] = $new_user->id;
+
         Doctor::create($data);
 
 		return redirect()->back();
@@ -123,6 +144,8 @@ class DoctorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Doctor::destroy($id);
+
+        return redirect()->back();
     }
 }

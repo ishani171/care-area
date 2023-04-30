@@ -9,7 +9,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashBoardController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobsController;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +51,7 @@ Route::prefix('admin/specialities')->group(function () {
 	Route::get('/new', [SpecialityController::class, 'add_new_speciality_view'])->name('admin.specialities.new')->middleware('auth');
 });
 
+
 Route::prefix('admin/patients')->group(function () {
 	Route::get('/', [PatientController::class, 'patients'])->name('admin.patients')->middleware('auth');
 });
@@ -67,8 +70,13 @@ Route::prefix('doctors')->group(function () {
 	Route::post('/search',[DoctorController::class, 'search'])->name('doctors.search');
 });
 
+Route::get('/doctor/profile',[DoctorController::class, 'profile'])->name('doctor.profile')->middleware(['auth','doctor']);
+
 Route::post('/paypal-payment-completed',[PaymentController::class, 'payment_complete']);
 Route::post('/orders',[PaymentController::class, 'orders']);
+
+Route::get('/admin/jobs', [JobsController::class, 'admin_jobs'])->middleware('admin')->name('admin.jobs');
+
 //* ************************************************************************************************* *//
 
 //RESOURCES
@@ -77,6 +85,8 @@ Route::resource('patients',PatientController::class);
 Route::resource('specialities',SpecialityController::class);
 Route::resource('receptions',ReceptionController::class);
 Route::resource('appoinments',AppoinmentController::class);
+Route::resource('feedbacks',FeedbackController::class)->middleware('auth');
+Route::resource('jobs',JobsController::class);
 
 //DEFAULT ROUTES
 Route::get('/dashboard', [DashBoardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');

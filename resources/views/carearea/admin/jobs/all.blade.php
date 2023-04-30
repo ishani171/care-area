@@ -5,23 +5,26 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="p-3">
-					<h4>List Of Receptions</h4>
+					<h4>List Of Jobs</h4>
 				</div>
-				@if (count($receptions) == 0)
-					<h5>No recceptions yet</h5>
-				@endif
 			</div>
+            <div class="col-12">
+                @if (count($jobs) == 0)
+                    No Jobs yet
+                @endif
+            </div>
 			<div class="col-12">
 				<div class="d-flex justify-end pt-2 pb-2">
-					<a class="btn btn-primary" href="/admin/receptions/new">+ Add Reception</a>
+					<a class="btn btn-primary" href="{{ route('jobs.create') }}">+ Add Job</a>
 				</div>
 			</div>
-			@foreach ($receptions as $reception)
+			@foreach ($jobs as $job)
 			<div class="col-12">
 				<div class="p-3 shadow-md rounded-md mb-2">
 					<div>
-						<h5 class="text-lg">{{ ucfirst($reception->first_name) }} {{ ucfirst($reception->last_name) }}</h5>
-						<p>{{ $reception->email }}</p>
+						<h5 class="text-lg f-h">{{ ucfirst($job->title) }}</h5>
+						<p class="f-p">{{ $job->description }}</p>
+                        <p class="mt-3 f-p">Apply email - {{ $job->apply_email }}</p>
 					</div>
 				</div>
 			</div>

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Appoinment;
-use App\Models\Doctor;
+use App\Http\Requests\CreateFeedbackRequest;
+use App\Models\Feedback;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AppoinmentController extends Controller
+class FeedbackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,21 +17,24 @@ class AppoinmentController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $feedbacks = [];
 
-    public function new(Request $request,$doctor_id){
-        return view('carearea.appoinment.new',["doctor" => Doctor::find($doctor_id)]);
+        foreach(Feedback::all() as $feedback){
+            $feedback["user"] = User::find($feedback->user_id);
+            array_push($feedbacks, $feedback);
+        }
+
+        return view('carearea.feedbacks.all',["feedbacks" => $feedbacks]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function create()
     {
-        //
+        return view('carearea.feedbacks.create');
     }
 
     /**
@@ -39,14 +43,14 @@ class AppoinmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFeedbackRequest $request)
     {
         $data = $request->all();
         $data["user_id"] = Auth::id();
 
-        $appoinment = Appoinment::create($data);
+        Feedback::create($data);
 
-        return redirect()->route('appoinment.payment',$appoinment->id);
+        return redirect()->back();
     }
 
     /**
@@ -91,7 +95,7 @@ class AppoinmentController extends Controller
      */
     public function destroy($id)
     {
-        Appoinment::destroy($id);
+        Feedback::destroy($id);
         return redirect()->back();
     }
 }

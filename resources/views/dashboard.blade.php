@@ -37,8 +37,41 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="mt-3">
+                                @if (!$item->paid)
+                                    <form action="{{ route('appoinments.destroy',$item->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="px-2 py-1 bg-red-300 f-p rounded">Delete</button>
+                                    </form>
+                                @endif
+                            </div>
                         </div>
                     @endforeach
+                </div>
+                <div class="px-6">
+                    <div>
+                        <h5 class="text-2xl">Your Feedbacks</h5>
+                    </div>
+                    <div class="mt-3">
+                        @if (count($feedbacks) == 0)
+                            <div>
+                                <h5>No feedbacks yet</h5>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="mt-3">
+                        @foreach ($feedbacks as $item)
+                            <div class="p-3 rounded-md shadow-md mb-3">
+                                <p class="f-p text-xl">{{ $item->message }}</p>
+                                <form action="{{ route('feedbacks.destroy',$item->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="px-2 py-1 bg-red-300 f-p rounded mt-3">Delete</button>
+                                </form>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

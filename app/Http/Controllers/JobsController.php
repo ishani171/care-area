@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Appoinment;
-use App\Models\Doctor;
+use App\Models\Job;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AppoinmentController extends Controller
+class JobsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        //
-    }
-
-    public function new(Request $request,$doctor_id){
-        return view('carearea.appoinment.new',["doctor" => Doctor::find($doctor_id)]);
+        return view('carearea.jobs.all',[
+            "jobs" => Job::all()
+        ]);
     }
 
     /**
@@ -30,7 +27,7 @@ class AppoinmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('carearea.admin.jobs.create');
     }
 
     /**
@@ -43,11 +40,21 @@ class AppoinmentController extends Controller
     {
         $data = $request->all();
         $data["user_id"] = Auth::id();
-
-        $appoinment = Appoinment::create($data);
-
-        return redirect()->route('appoinment.payment',$appoinment->id);
+        
+        Job::create($data);
+        return redirect()->route('jobs.index');
     }
+
+    public function view_jobs(){
+
+    }
+
+    public function admin_jobs(){
+        return view('carearea.admin.jobs.all',[
+            "jobs" => Job::all()
+        ]);
+    }
+
 
     /**
      * Display the specified resource.
@@ -91,7 +98,6 @@ class AppoinmentController extends Controller
      */
     public function destroy($id)
     {
-        Appoinment::destroy($id);
-        return redirect()->back();
+        //
     }
 }

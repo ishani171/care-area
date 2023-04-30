@@ -29,13 +29,18 @@
 							<a class="nav-link" href="{{ route('dashboard') }}" title="Dashboard"><i class="fa-solid fa-table-columns fs-4"></i></a>
 						  </li>
 						<li class="nav-item ms-2">
-							<a class="nav-link" href="#" title="Jobs"><i class="fa-solid fa-briefcase fs-4"></i></a>
+							<a class="nav-link" href="{{ route('jobs.index') }}" title="Jobs"><i class="fa-solid fa-briefcase fs-4"></i></a>
 						</li>
 						<li class="nav-item ms-2">
-							<a class="nav-link" href="#" title="Feedbacks"><i class="fa-solid fa-comments fs-4"></i></a>
+							<a class="nav-link" href="{{ route('feedbacks.index') }}" title="Feedbacks"><i class="fa-solid fa-comments fs-4"></i></a>
 						</li>
+						@auth
 						<li class="nav-item ms-2">
-							<a class="nav-link" href="#" title="About"><i class="fa-solid fa-circle-question fs-4"></i></a>
+							<a class="nav-link" href="/profile" title="Profile"><i class="fa-solid fa-user fs-4"></i></a>
+						</li>
+						@endauth
+						<li class="nav-item ms-2">
+							<a class="nav-link" href="/about" title="About"><i class="fa-solid fa-circle-question fs-4"></i></a>
 						</li>
 						@guest
 						<li class="nav-item ms-2">
