@@ -24,12 +24,14 @@
 						<div class="h-100 w-100">
 							<div class="content-wrap mt-4 shadow-sm rounded">
 								<div class="p-3">
-									<h2 class="f-title title">Welcome to<br> <span class="cr">Care Area </span>,</h2>
+									<h2 class="f-title title">Welcome to<br> <span class="cr f-title">Care Area </span>,</h2>
 									<h3 class="lh-base f-h fs-3 text-wrap">
 										 where world-class healthcare and passion for prevention
 										 meet in a magnificent atmosphere with truly outstanding service.
 									</h3>
-									<button class="border-0 f-p mt-3 px-3 see-more py-1 shadow-sm bg-light">See More</button>
+									<div class="mt-3">
+										<a href="/home" class="border-0 f-p px-3 see-more py-1 shadow-sm bg-light text-decoration-none">See More</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -47,7 +49,7 @@
 							<img src="/assets/images/widget1.png" alt="">
 						</div>
 						<div class="heading pt-4">
-							<h5 align="center">Healthcare</h5>
+							<h5 align="center" class="f-h">Healthcare</h5>
 						</div>
 					</div>
 				</div>
@@ -59,7 +61,7 @@
 							<img src="/assets/images/widget2.png" alt="">
 						</div>
 						<div class="heading pt-4">
-							<h5 align="center">blood donating</h5>
+							<h5 align="center" class="f-h">blood donating</h5>
 						</div>
 					</div>
 				</div>
@@ -71,7 +73,7 @@
 							<img src="/assets/images/widget3.png" alt="">
 						</div>
 						<div class="heading pt-4">
-							<h5 align="center">Medical Counseling</h5>
+							<h5 align="center" class="f-h">Medical Counseling</h5>
 						</div>
 					</div>
 				</div>
@@ -83,7 +85,7 @@
 							<img src="/assets/images/widget4.png" alt="">
 						</div>
 						<div class="heading pt-4">
-							<h5 align="center">Online appoinments</h5>
+							<h5 align="center" class="f-h">Online appoinments</h5>
 						</div>
 					</div>
 				</div>
@@ -95,7 +97,7 @@
 							<img src="/assets/images/widget5.png" alt="">
 						</div>
 						<div class="heading pt-4">
-							<h5 align="center">Qualified doctors</h5>
+							<h5 align="center" class="f-h">Qualified doctors</h5>
 						</div>
 					</div>
 				</div>
@@ -107,7 +109,7 @@
 							<img src="/assets/images/widget6.png" alt="">
 						</div>
 						<div class="heading pt-4">
-							<h5 align="center">medicine orders</h5>
+							<h5 align="center" class="f-h">medicine orders</h5>
 						</div>
 					</div>
 				</div>
@@ -129,7 +131,6 @@
 										<span class="fw-bolder f-h">Heladiwa Hospital</span> has all the modern services and necessary to provide compherasive healthcare with since 2007 the medical laboratory functions around the clock. All the medical tests are carried out using state of the art equipment ensuring accuracy and reliability the pharmacies are well stocked with all the drugs of the best quality.
 									</h5>
 								</div>
-								
 							</div>
 						</div>
 					</div>
