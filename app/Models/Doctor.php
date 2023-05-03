@@ -14,6 +14,7 @@ class Doctor extends Model
 		'last_name',
 		'email',
 		'telephone',
+		'user_id',
 		'speciality',
 		'speciality_name',
 		'docterate',

@@ -99,7 +99,7 @@ class DoctorController extends Controller
 
         Doctor::create($data);
 
-		return redirect()->back();
+		return redirect()->route('admin.doctors');
     }
 
     /**
