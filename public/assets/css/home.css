@@ -21,7 +21,7 @@
 	background-image: linear-gradient(to right, #c7f6fbaf, #fafdff58);
 }
 .content-banner-1{
-	background-color: rgb(253, 166, 234);
+	background-color: rgb(35, 35, 35);
 	height: 600px;
 }
 .content-banner-2{
@@ -40,7 +40,11 @@
 	min-width: 220px;
 	border-radius: 9px;
 }
-
+.text{
+	color: rgb(176, 150, 0);
+	font-size: 30px;
+    line-height: 1.6;
+}
 *{
     font-family: Roboto;
 }
