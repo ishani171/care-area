@@ -30,7 +30,7 @@
 										 meet in a magnificent atmosphere with truly outstanding service.
 									</h3>
 									<div class="mt-3">
-										<a href="/home" class="border-0 f-p px-3 see-more py-1 shadow-sm bg-light text-decoration-none">See More</a>
+										<a href="/home" class="border-0 f-h see-more px-4 see-more py-2 shadow-sm text-white rounded text-decoration-none fs-4">See More</a>
 									</div>
 								</div>
 							</div>
@@ -125,26 +125,44 @@
 							<div class="col-xl-7 col-lg-7">
 								<img src="/assets/images/wel.jpg" alt="" class="banner-img">
 							</div>
-							<div class="col-xl-5 col-lg-5 h-100">
-								<div class="d-flex align-items-center h-100 pe-3">
-									<h5 class="text f-h">
-										<span class="fw-bolder f-h">Heladiwa Hospital</span> has all the modern services and necessary to provide compherasive healthcare with since 2007 the medical laboratory functions around the clock. All the medical tests are carried out using state of the art equipment ensuring accuracy and reliability the pharmacies are well stocked with all the drugs of the best quality.
-									</h5>
+							<div class="col-xl-5 col-lg-5 h-100 bg-dark">
+								<div class="d-flex align-items-center h-100 ps-3">
+									<div>
+										<h3 class="f-title fs-1 text-white">Our Story</h3>
+										<h5 class="text f-h mt-2">
+											<span class="fw-bolder f-h">Heladiwa Hospital</span> has all the modern services and necessary to provide compherasive healthcare with since 2007 the medical laboratory functions around the clock. All the medical tests are carried out using state of the art equipment ensuring accuracy and reliability the pharmacies are well stocked with all the drugs of the best quality.
+										</h5>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="content-banner-2">
-
-				</div>
-				<div class="content-banner-3">
-
-				</div>
-				<div class="content-banner-4">
-
+					<div class="container-fluid h-100 ps-0 pe-0">
+						<div class="row h-100">
+							<div class="col-xl-5 col-lg-5 h-100 bg-dark">
+								<div class="d-flex align-items-center h-100 ps-3">
+									<div>
+										<h3 class="f-title fs-1 text-white">Our Purpose</h3>
+										<h5 class="text f-h mt-2">
+											Through The Care Area patients can access all information anytime and anywhere even during their bussinuss hours This site will continue to serve our patients and secure new ones.Sometimes, people need help or answers in the middle of the night. The Care Area provides users with the information they need at all times and offers many services at one place.
+										</h5>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-7 col-lg-7 pe-0 h-100">
+								<img src="/assets/images/para.jpg" alt="" class="banner-img">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="" style="height: 300px; background: rgb(0, 152, 119);">
+		<div class="p-3 h-100 d-flex justify-content-center align-items-center">
+			<a href="/login" class="px-5 py-4 rounded bg-dark text-white f-h text-decoration-none">Join Us</a>
 		</div>
 	</div>
 	<div class="container-fluid">

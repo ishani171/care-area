@@ -21,19 +21,19 @@
 	background-image: linear-gradient(to right, #c7f6fbaf, #fafdff58);
 }
 .content-banner-1{
-	background-color: rgb(35, 35, 35);
+	background-color: transparent;
 	height: 600px;
 }
 .content-banner-2{
-	background-color: rgb(35, 163, 243);
+	background-color: transparent;
 	height: 600px;
 }
 .content-banner-3{
-	background-color: rgb(13, 227, 216);
+	background-color: transparent;
 	height: 600px;
 }
 .content-banner-4{
-	background-color: rgb(246, 254, 226);
+	background-color: transparent;
 	height: 600px;
 }
 .dropdown-menu{
@@ -54,6 +54,12 @@
 .banner-img{
 	width: 100%;
 	height: 100%;
+}
+.see-more{
+	background-image: linear-gradient(to right, rgb(19, 125, 255), rgb(132, 255, 220));
+}
+.see-more:hover{
+	background-color: #0c0c0c !important;
 }
 .text-box{
     z-index: 99;
