@@ -123,7 +123,7 @@
 					<div class="container-fluid h-100">
 						<div class="row h-100">
 							<div class="col-xl-7 col-lg-7">
-								
+								<img src="/assets/images/wel.jpg" alt="" class="banner-img">
 							</div>
 							<div class="col-xl-5 col-lg-5 h-100">
 								<div class="d-flex align-items-center h-100 pe-3">
