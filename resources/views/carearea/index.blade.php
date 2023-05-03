@@ -120,7 +120,7 @@
 		<div class="row">
 			<div class="col-12 px-0">
 				<div class="content-banner-1">
-					<div class="container-fluid h-100">
+					<div class="container-fluid h-100 ps-0 pe-0">
 						<div class="row h-100">
 							<div class="col-xl-7 col-lg-7">
 								<img src="/assets/images/wel.jpg" alt="" class="banner-img">
