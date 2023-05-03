@@ -118,7 +118,19 @@
 		<div class="row">
 			<div class="col-12 px-0">
 				<div class="content-banner-1">
-
+					<div class="row">
+						<div class="col-xl-6 col-lg-6">
+							
+						</div>
+						<div class="col-xl-6 col-lg-6">
+							<h5>Heladiwa Hospital has all the modern services and necessary to provide compherasive healthcare with since 2007
+								The medical laboratory functions around the clock.
+								All the medical tests are carried out using state of the art equipment ensuring accuracy and reliability
+								The pharmacies are well stocked with all the drugs of the best quality
+							</h5>
+						</div>
+					</div>
+					
 				</div>
 				<div class="content-banner-2">
 
