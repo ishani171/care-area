@@ -38,6 +38,82 @@
 			</div>
 		</div>
 	</div>
+	<div class="container mt-4">
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-5">
+				<div class="p-3 shadow f-card">
+					<div class="featured pt-4 pb-5">
+						<div class="png d-flex justify-content-center">
+							<img src="/assets/images/widget1.png" alt="">
+						</div>
+						<div class="heading pt-4">
+							<h5 align="center">Healthcare</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-5">
+				<div class="p-3 shadow f-card">
+					<div class="featured pt-4 pb-5">
+						<div class="png d-flex justify-content-center">
+							<img src="/assets/images/widget2.png" alt="">
+						</div>
+						<div class="heading pt-4">
+							<h5 align="center">blood donating</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-5">
+				<div class="p-3 shadow f-card">
+					<div class="featured pt-4 pb-5">
+						<div class="png d-flex justify-content-center">
+							<img src="/assets/images/widget3.png" alt="">
+						</div>
+						<div class="heading pt-4">
+							<h5 align="center">Medical Counseling</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-5">
+				<div class="p-3 shadow f-card">
+					<div class="featured pt-4 pb-5">
+						<div class="png d-flex justify-content-center">
+							<img src="/assets/images/widget4.png" alt="">
+						</div>
+						<div class="heading pt-4">
+							<h5 align="center">Online appoinments</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-5">
+				<div class="p-3 shadow f-card">
+					<div class="featured pt-4 pb-5">
+						<div class="png d-flex justify-content-center">
+							<img src="/assets/images/widget5.png" alt="">
+						</div>
+						<div class="heading pt-4">
+							<h5 align="center">Qualified doctors</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-5">
+				<div class="p-3 shadow f-card">
+					<div class="featured pt-4 pb-5">
+						<div class="png d-flex justify-content-center">
+							<img src="/assets/images/widget6.png" alt="">
+						</div>
+						<div class="heading pt-4">
+							<h5 align="center">medicine orders</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12 px-0">

@@ -40,3 +40,103 @@
 	min-width: 220px;
 	border-radius: 9px;
 }
+
+*{
+    font-family: Roboto;
+}
+.container-row{
+    height: 100vh;
+}
+
+.text-box{
+    z-index: 99;
+    padding-top: 20px;
+    color: #fff;
+}
+.text-box h1{
+    font-size: 75px;
+    font-family: Ubuntu Condensed;
+}
+.banner{
+    width: 100%;
+}
+.banner-sec{
+    height: 500px;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.darker{
+    background-color: rgba(0, 0, 0, 0.274);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.text-box p{
+    font-size: 25px ;
+    font-family: Archivo black;
+}
+.nav-item nav-link{
+    flex: 1;
+    text-align: right;
+}
+.background{
+    height: 600px;
+    background-image: url(log.jpg);
+    background-size: cover;
+}
+.join-btn{
+    background-color: #0b867a;
+    color: #fff !important;
+}
+.get-started{
+    color: #fff;
+    font-weight: bold;
+    background: crimson;
+    padding: 12px 32px;
+    font-size: 25px;
+    border-radius: 30px;
+}
+.get-started:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: crimson;
+}
+.png img{
+    width: 100px;
+    height: 90px;
+}
+.nav-item{
+    margin-left: 8px;
+}
+.nav-link:hover{
+    color: #fff !important;
+    background: #0aad7c;
+}
+.f-card{
+    border-radius: 12px;
+}
+.footer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+}
+.quote-sec{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #009688;
+}
+.footer p{
+    color: gray;
+}
+.w-70{
+    width: 70%;
+}
+.border-m{
+    border: 3px solid rgb(211, 217, 218);
+}
+.quote h6{
+    font-size: 25px;
+    line-height: 2.7rem;
+    color:whitesmoke;
+}
