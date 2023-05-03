@@ -16,6 +16,8 @@
                     @if(count($appoinments) == 0)
                         <p>No Appoinments yet</p>
                     @endif
+
+                    @if(count($appoinments) > 0)
                     @foreach ($appoinments as $item)
                         <div class="p-3 shadow mb-4 border-[1px] border-slate-100 mt-4">
                             <div class="flex justify-between">
@@ -52,6 +54,7 @@
                             </div>
                         </div>
                     @endforeach
+                    @endif
                 </div>
                 <div class="px-6">
                     <div>
